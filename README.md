@@ -22,6 +22,7 @@ After installing Rasperry Pi OS Lite I installed the LED-Matrix library from Hen
 ´´´
 curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh >rgb-matrix.sh
 sudo bash rgb-matrix.sh
+´´´
 
 After rebooting I installed node.js following this tutorial: https://tutorials-raspberrypi.de/raspberry-pi-nodejs-webserver-installieren-gpios-steuern/
 
@@ -30,6 +31,7 @@ sudo apt-get update
 sudo apt-get full-upgrade
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
+´´´
 
 The next steps are optional, I installed git following this article: https://www.raspberry-pi-geek.de/ausgaben/rpg/2019/04/quellcode-managen-mit-git-und-dem-raspberry-pi/ and configured my Raspberry to remote code using Visual Studio Code (https://www.raspberrypi.com/news/coding-on-raspberry-pi-remotely-with-visual-studio-code/).
 
@@ -43,6 +45,7 @@ After wiring up your LED-Matrix and installing the prerequisites described above
 git clone https://github.com/jwpriv/ledmatrix-srv.git
 npm run build
 sudo node dist/app.js
+´´´
 
 This will start a simple Express.js web service which will listen at Port 3000 to a POST to /clear for clearing the matrix and POST to /pixel using my Pixel Type for setting on Pixel to a certain color.
 You can run node without the sudo keyword, but the library needs superuser access to do some hardware magic to improve the output stability.
