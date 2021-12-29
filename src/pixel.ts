@@ -1,6 +1,10 @@
+export interface Position {
+    row: number,
+    col: number
+}
+
 export interface Pixel {
-    row: number;
-    col: number;
+    position: Position,
     brightness: number;
     color: string;
 }

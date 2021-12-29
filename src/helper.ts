@@ -7,7 +7,7 @@ export function hexToColor(hex: string): Color | null {
         var g= parseInt(result[2], 16);
         var b= parseInt(result[3], 16);
         
-        let color: Color = { r,g ,b };
+        let color: Color = { r, g ,b };
         return color;
     } 
 
